@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charity Trustee Details | Ri Cruden Ltd</title>
+<meta name="author" content="Ri Cruden Ltd">
+<meta name="description" content="Charity trustee details collection form for submission to the Scottish Charity Register (OSCR).">
+<style>
+  :root{
+    --navy:#001428;
+    --heading-green:#00783C;
+    --accent-green:#14A050;
+    --rule-green:#28C864;
+    --body:#1A1A1A;
+    --grey:#666666;
+    --soft:#F2F7F4;
+    --white:#FFFFFF;
+    --line:#D8DEDA;
+    --alert:#A31621;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:#E9EEEB;
+    color:var(--body);
+    font-family:Calibri,"Carlito","Segoe UI",Candara,Optima,sans-serif;
+    font-size:16px;
+    line-height:1.5;
+  }
+  .sheet{
+    max-width:920px;
+    margin:24px auto;
+    background:var(--white);
+    padding:32px 40px 24px;
+  }
+  header.brand{padding-top:4px;}
+  .kicker{
+    font-size:12px;font-weight:700;color:var(--heading-green);
+    text-transform:uppercase;letter-spacing:.12em;margin:0;
+  }
+  h1{
+    font-size:28px;font-weight:700;color:var(--navy);
+    margin:20px 0 4px;line-height:1.2;
+  }
+  .subtitle{font-size:17px;font-style:italic;color:var(--heading-green);margin:0 0 20px;}
+  .intro{margin:0 0 8px;}
+  .cover-rule{border:0;border-top:3px solid var(--rule-green);margin:20px 0 24px;}
+  h2{
+    font-size:19px;font-weight:700;color:var(--navy);
+    margin:36px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--rule-green);
+  }
+  h2 .num{color:var(--accent-green);margin-right:10px;}
+  h2:first-of-type{margin-top:24px;}
+  .section-note{font-size:14px;color:var(--grey);margin:8px 0 18px;}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;}
+  .field.full{grid-column:1 / -1;}
+  label.lbl{display:block;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+  .req{color:var(--alert);font-weight:700;}
+  .hint{display:block;font-weight:400;font-size:13px;font-style:italic;color:var(--grey);margin-top:2px;}
+  input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{
+    width:100%;padding:10px 12px;border:1px solid var(--line);background:var(--white);
+    font-family:inherit;font-size:16px;color:var(--body);border-radius:0;
+  }
+  textarea{min-height:88px;resize:vertical;}
+  input:focus,select:focus,textarea:focus{outline:3px solid var(--rule-green);outline-offset:1px;border-color:var(--heading-green);}
+  input:invalid:not(:placeholder-shown){border-color:var(--alert);}
+  fieldset{border:0;padding:0;margin:0;}
+  legend{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:8px;padding:0;}
+  .radio-row{display:flex;gap:24px;flex-wrap:wrap;}
+  .radio-row label{display:flex;align-items:center;gap:8px;font-size:15px;}
+  input[type=radio],input[type=checkbox]{accent-color:var(--accent-green);width:18px;height:18px;}
+  .callout{
+    background:var(--soft);border-top:2px solid var(--rule-green);border-bottom:2px solid var(--rule-green);
+    padding:16px 20px;margin:24px 0;
+  }
+  .callout h3{font-size:15px;font-weight:700;color:var(--heading-green);margin:0 0 6px;}
+  .callout p{margin:0;font-size:15px;}
+  .callout a{color:var(--heading-green);}
+  .ack{background:var(--soft);padding:18px 20px;margin-top:8px;}
+  .ack .ack-head{display:flex;gap:12px;align-items:flex-start;font-weight:700;color:var(--navy);}
+  .ack ul{margin:10px 0 0 6px;padding-left:22px;font-size:15px;}
+  .ack li{margin-bottom:8px;}
+  .ack li::marker{color:var(--accent-green);}
+  .actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:32px 0 8px;}
+  button{
+    font-family:inherit;font-size:16px;font-weight:700;padding:12px 26px;border:2px solid var(--navy);
+    background:var(--navy);color:var(--white);cursor:pointer;border-radius:0;
+  }
+  button:hover{background:var(--heading-green);border-color:var(--heading-green);}
+  button.secondary{background:var(--white);color:var(--navy);}
+  button.secondary:hover{background:var(--soft);color:var(--heading-green);border-color:var(--heading-green);}
+  button:focus-visible{outline:3px solid var(--rule-green);outline-offset:2px;}
+  .status{font-size:14px;color:var(--alert);font-weight:700;min-height:20px;}
+  footer{
+    border-top:2px solid var(--rule-green);margin-top:32px;padding-top:10px;
+    text-align:center;font-size:11px;color:var(--grey);
+  }
+  .hidden{display:none !important;}
+  @media (max-width:680px){
+    .sheet{padding:20px;margin:0;}
+    .grid{grid-template-columns:1fr;}
+    h1{font-size:24px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .sheet{margin:0;padding:0;max-width:none;}
+    .actions{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="brand">
+    <p class="kicker">Charity governance &middot; OSCR</p>
+  </header>
+
+  <h1>Charity Trustee Details</h1>
+  <p class="subtitle">Information required for the Scottish Charity Register</p>
+  <p class="intro">Complete every field marked <span class="req">*</span> and send the form using the button at the end. Your answers are used to add or update your entry in OSCR's schedule of charity trustees. If a field does not apply to you, tell us in the notes box rather than leaving it blank.</p>
+  <hr class="cover-rule">
+
+  <div class="callout">
+    <h3>How your information is used</h3>
+    <p>From early 2026 charity trustee first and last names are displayed on the public Scottish Charity Register, unless an exemption has been approved. OSCR removes a former trustee's details from the Register when they cease to be a trustee. Trustee information is held in OSCR's internal schedule for two years after a person ceases to be a trustee, after which it is deleted. Contact details, date of birth and home address are not published.</p>
+  </div>
+
+  <form name="charity-trustee-details" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" id="trusteeForm">
+    <input type="hidden" name="form-name" value="charity-trustee-details">
+    <p class="hidden"><label>Leave this field empty <input name="bot-field"></label></p>
+
+    <h2><span class="num">1</span>Type of charity trustee</h2>
+    <fieldset>
+      <legend>Are you completing this as an individual or on behalf of an organisation? <span class="req">*</span></legend>
+      <div class="radio-row">
+        <label><input type="radio" name="trustee-type" value="Individual" id="typeIndividual" checked required> Individual</label>
+        <label><input type="radio" name="trustee-type" value="Organisation or body acting as a charity trustee (corporate trustee)" id="typeCorporate"> Organisation or body acting as a charity trustee (corporate trustee)</label>
+      </div>
+    </fieldset>
+
+    <h2><span class="num">2</span>Name and contact details</h2>
+
+    <div class="grid" id="individualBlock">
+      <div class="field">
+        <label class="lbl" for="firstName">First Name <span class="req">*</span></label>
+        <input type="text" id="firstName" name="first-name" autocomplete="given-name" required>
+      </div>
+      <div class="field">
+        <label class="lbl" for="lastName">Last Name <span class="req">*</span></label>
+        <input type="text" id="lastName" name="last-name" autocomplete="family-name" required>
+      </div>
+      <div class="field">
+        <label class="lbl" for="knownAs">Known As Name
+          <span class="hint">Only if you are commonly known by a different name, for example Kate instead of Katherine.</span>
+        </label>
+        <input type="text" id="knownAs" name="known-as-name">
+      </div>
+      <div class="field">
+        <label class="lbl" for="dob">Date of Birth <span class="req">*</span>
+          <span class="hint">Format DD/MM/YYYY. Not published on the Register.</span>
+        </label>
+        <input type="date" id="dob" name="date-of-birth" required>
+      </div>
+    </div>
+
+    <div class="grid hidden" id="corporateBlock">
+      <div class="field full">
+        <label class="lbl" for="orgName">Organisation Name <span class="req">*</span></label>
+        <input type="text" id="orgName" name="organisation-name" disabled>
+      </div>
+      <div class="field">
+        <label class="lbl" for="orgNumber">Company or Charity Number
+          <span class="hint">If the organisation is registered.</span>
+        </label>
+        <input type="text" id="orgNumber" name="organisation-number" disabled>
+      </div>
+      <div class="field">
+        <label class="lbl" for="orgContact">Main Contact Name <span class="req">*</span></label>
+        <input type="text" id="orgContact" name="organisation-contact-name" disabled>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:18px;">
+      <div class="field">
+        <label class="lbl" for="email">Email Address <span class="req">*</span></label>
+        <input type="email" id="email" name="email-address" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label class="lbl" for="phone">Phone Number <span class="req">*</span>
+          <span class="hint">Digits only, no spaces.</span>
+        </label>
+        <input type="tel" id="phone" name="phone-number" inputmode="tel" pattern="[0-9+]{7,16}" title="Enter 7 to 16 digits with no spaces. A leading + is allowed." required>
+      </div>
+    </div>
+
+    <h2><span class="num">3</span>Address</h2>
+    <div class="grid">
+      <div class="field">
+        <label class="lbl" for="outsideUK">Do you live outside the UK? <span class="req">*</span></label>
+        <select id="outsideUK" name="lives-outside-uk" required>
+          <option value="No" selected>No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+      <div class="field hidden" id="countryField">
+        <label class="lbl" for="country">Country of Residence <span class="req">*</span></label>
+        <input type="text" id="country" name="country-of-residence" disabled>
+      </div>
+      <div class="field full">
+        <label class="lbl" for="address">Home Address <span class="req">*</span>
+          <span class="hint">Building number or name, street, town or city. Not published on the Register.</span>
+        </label>
+        <textarea id="address" name="home-address" autocomplete="street-address" required></textarea>
+      </div>
+      <div class="field">
+        <label class="lbl" for="postcode">Postcode <span class="req">*</span></label>
+        <input type="text" id="postcode" name="postcode" autocomplete="postal-code" required>
+      </div>
+    </div>
+
+    <h2><span class="num">4</span>Appointment</h2>
+    <div class="grid">
+      <div class="field full">
+        <label class="lbl" for="appointed">Date of Appointment as Trustee <span class="req">*</span>
+          <span class="hint">The original date you became a charity trustee. If you have been reappointed after serving a term, still use your initial appointment date. If you were appointed many years ago and the exact date is unknown, an estimated date is acceptable.</span>
+        </label>
+        <input type="date" id="appointed" name="date-of-appointment" required>
+      </div>
+    </div>
+
+    <h2><span class="num">5</span>Exemption from publication</h2>
+    <div class="callout">
+      <h3>Before you answer</h3>
+      <p>In certain circumstances a charity trustee can have their name exempted from publication on the Scottish Charity Register. An exemption applies only after an application has been approved by OSCR, and is granted only where specific criteria are met. Guidance is available on the <a href="https://www.oscr.org.uk/" target="_blank" rel="noopener">OSCR website</a>. Answer Yes below only if you intend to apply.</p>
+    </div>
+    <div class="grid">
+      <div class="field full">
+        <label class="lbl" for="exemption">Do you intend to apply for an exemption from publication of your name on the Scottish Charity Register? <span class="req">*</span></label>
+        <select id="exemption" name="exemption-intent" required>
+          <option value="No" selected>No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+      <div class="field full hidden" id="exemptionReasonField">
+        <label class="lbl" for="exemptionReason">Reason for the exemption application <span class="req">*</span>
+          <span class="hint">A short summary so we can support your application to OSCR.</span>
+        </label>
+        <textarea id="exemptionReason" name="exemption-reason" disabled></textarea>
+      </div>
+    </div>
+
+    <h2><span class="num">6</span>Notes and declaration</h2>
+    <div class="grid">
+      <div class="field full">
+        <label class="lbl" for="notes">Anything we should know</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+    </div>
+
+    <div class="ack">
+      <label class="ack-head" for="declaration">
+        <input type="checkbox" id="declaration" name="declaration" value="Yes" required>
+        <span>By ticking this box, I acknowledge that: <span class="req">*</span></span>
+      </label>
+      <ul>
+        <li>the information supplied is accurate to the best of my knowledge.</li>
+        <li>charity trustee information will be held in OSCR's internal schedule of charity trustees while I am a charity trustee and for two years after I cease to be a charity trustee, after which it will be automatically deleted.</li>
+        <li>any charity trustee who does not have an exemption from name publication will have their first and last name published on the charity's register entry on the Scottish Charity Register while they are a charity trustee.</li>
+        <li>I, or another charity user, will update the charity trustee's information if any changes occur.</li>
+      </ul>
+    </div>
+
+    <div class="actions">
+      <button type="submit">Send my details</button>
+      <button type="button" class="secondary" onclick="window.print()">Print or save as PDF</button>
+    </div>
+    <p class="status" id="status" role="alert"></p>
+  </form>
+
+  <footer>
+    Ri Cruden Ltd | Renewable Innovation Centre, 12&ndash;14 Seafield Road, Inverness, IV1 1SG | 01463 220900 | info@ricruden.net | www.ricruden.net
+  </footer>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('trusteeForm');
+  var individual = document.getElementById('typeIndividual');
+  var corporate  = document.getElementById('typeCorporate');
+  var indBlock   = document.getElementById('individualBlock');
+  var corpBlock  = document.getElementById('corporateBlock');
+  var outsideUK  = document.getElementById('outsideUK');
+  var countryF   = document.getElementById('countryField');
+  var exemption  = document.getElementById('exemption');
+  var exReasonF  = document.getElementById('exemptionReasonField');
+  var postcode   = document.getElementById('postcode');
+  var phone      = document.getElementById('phone');
+  var status     = document.getElementById('status');
+
+  // Fields inside a hidden block are disabled so the browser does not block
+  // submission on invisible required inputs, and empty values are not posted.
+  var requiredWhenShown = {
+    orgName:true, orgContact:true, country:true, exemptionReason:true
+  };
+
+  function setBlock(block, shown){
+    block.classList.toggle('hidden', !shown);
+    var fields = block.querySelectorAll('input, select, textarea');
+    for (var i=0;i<fields.length;i++){
+      var f = fields[i];
+      f.disabled = !shown;
+      if (requiredWhenShown[f.id] || f.hasAttribute('data-req')){
+        if (shown){ f.setAttribute('required',''); } else { f.removeAttribute('required'); }
+      }
+    }
+  }
+
+  function syncType(){
+    var isIndividual = individual.checked;
+    setBlock(indBlock, isIndividual);
+    setBlock(corpBlock, !isIndividual);
+    // first/last/dob are required only for individuals
+    ['firstName','lastName','dob'].forEach(function(id){
+      var el = document.getElementById(id);
+      if (isIndividual){ el.setAttribute('required',''); } else { el.removeAttribute('required'); }
+    });
+  }
+
+  individual.addEventListener('change', syncType);
+  corporate.addEventListener('change', syncType);
+
+  outsideUK.addEventListener('change', function(){
+    var abroad = outsideUK.value === 'Yes';
+    setBlock(countryF, abroad);
+    if (abroad){
+      postcode.removeAttribute('pattern');
+    } else {
+      postcode.setAttribute('pattern','[A-Za-z]{1,2}[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}');
+      postcode.setAttribute('title','Enter a UK postcode, for example IV1 1SG.');
+    }
+  });
+
+  exemption.addEventListener('change', function(){
+    setBlock(exReasonF, exemption.value === 'Yes');
+  });
+
+  postcode.addEventListener('blur', function(){
+    postcode.value = postcode.value.toUpperCase().replace(/\s+/g,' ').trim();
+  });
+
+  phone.addEventListener('blur', function(){
+    phone.value = phone.value.replace(/[\s()-]/g,'');
+  });
+
+  // Sensible date limits: appointment cannot be in the future, trustees are 16+.
+  var today = new Date();
+  var iso = function(d){ return d.toISOString().slice(0,10); };
+  document.getElementById('appointed').setAttribute('max', iso(today));
+  var sixteen = new Date(today.getFullYear()-16, today.getMonth(), today.getDate());
+  document.getElementById('dob').setAttribute('max', iso(sixteen));
+
+  form.addEventListener('submit', function(e){
+    if (!form.checkValidity()){
+      e.preventDefault();
+      status.textContent = 'Some required fields still need attention. The first one is highlighted below.';
+      form.reportValidity();
+    } else {
+      status.textContent = '';
+    }
+  });
+
+  // Set initial state
+  postcode.setAttribute('pattern','[A-Za-z]{1,2}[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}');
+  postcode.setAttribute('title','Enter a UK postcode, for example IV1 1SG.');
+  syncType();
+})();
+</script>
+</body>
+</html>
