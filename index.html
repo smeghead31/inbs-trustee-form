@@ -3,29 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Charity Trustee Details | Ri Cruden Ltd</title>
-<meta name="author" content="Ri Cruden Ltd">
+<title>Charity Trustee Details | INBS District</title>
+<meta name="author" content="INBS District">
 <meta name="description" content="Charity trustee details collection form for submission to the Scottish Charity Register (OSCR).">
 <style>
   :root{
-    --navy:#001428;
-    --heading-green:#00783C;
-    --accent-green:#14A050;
-    --rule-green:#28C864;
-    --body:#1A1A1A;
-    --grey:#666666;
-    --soft:#F2F7F4;
+    --ink:#16233A;
+    --accent:#0F766E;
+    --accent-mid:#14907F;
+    --rule:#3FB6A2;
+    --body:#1F2933;
+    --grey:#6B7280;
+    --soft:#F1F6F5;
     --white:#FFFFFF;
-    --line:#D8DEDA;
+    --line:#D5DCDB;
     --alert:#A31621;
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0;
-    background:#E9EEEB;
+    background:#E8EDEC;
     color:var(--body);
-    font-family:Calibri,"Carlito","Segoe UI",Candara,Optima,sans-serif;
+    font-family:"Segoe UI",Calibri,Candara,Optima,system-ui,sans-serif;
     font-size:16px;
     line-height:1.5;
   }
@@ -35,28 +35,28 @@
     background:var(--white);
     padding:32px 40px 24px;
   }
-  header.brand{padding-top:4px;}
+  header.brand{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .wordmark{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:.02em;margin:0;}
   .kicker{
-    font-size:12px;font-weight:700;color:var(--heading-green);
+    font-size:12px;font-weight:700;color:var(--accent);
     text-transform:uppercase;letter-spacing:.12em;margin:0;
   }
   h1{
-    font-size:28px;font-weight:700;color:var(--navy);
+    font-size:28px;font-weight:700;color:var(--ink);
     margin:20px 0 4px;line-height:1.2;
   }
-  .subtitle{font-size:17px;font-style:italic;color:var(--heading-green);margin:0 0 20px;}
+  .subtitle{font-size:17px;font-style:italic;color:var(--accent);margin:0 0 20px;}
   .intro{margin:0 0 8px;}
-  .cover-rule{border:0;border-top:3px solid var(--rule-green);margin:20px 0 24px;}
+  .cover-rule{border:0;border-top:3px solid var(--rule);margin:20px 0 24px;}
   h2{
-    font-size:19px;font-weight:700;color:var(--navy);
-    margin:36px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--rule-green);
+    font-size:19px;font-weight:700;color:var(--ink);
+    margin:36px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--rule);
   }
-  h2 .num{color:var(--accent-green);margin-right:10px;}
+  h2 .num{color:var(--accent-mid);margin-right:10px;}
   h2:first-of-type{margin-top:24px;}
-  .section-note{font-size:14px;color:var(--grey);margin:8px 0 18px;}
   .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;}
   .field.full{grid-column:1 / -1;}
-  label.lbl{display:block;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+  label.lbl{display:block;font-weight:700;color:var(--ink);font-size:15px;margin-bottom:6px;}
   .req{color:var(--alert);font-weight:700;}
   .hint{display:block;font-weight:400;font-size:13px;font-style:italic;color:var(--grey);margin-top:2px;}
   input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{
@@ -64,38 +64,38 @@
     font-family:inherit;font-size:16px;color:var(--body);border-radius:0;
   }
   textarea{min-height:88px;resize:vertical;}
-  input:focus,select:focus,textarea:focus{outline:3px solid var(--rule-green);outline-offset:1px;border-color:var(--heading-green);}
+  input:focus,select:focus,textarea:focus{outline:3px solid var(--rule);outline-offset:1px;border-color:var(--accent);}
   input:invalid:not(:placeholder-shown){border-color:var(--alert);}
   fieldset{border:0;padding:0;margin:0;}
-  legend{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:8px;padding:0;}
+  legend{font-weight:700;color:var(--ink);font-size:15px;margin-bottom:8px;padding:0;}
   .radio-row{display:flex;gap:24px;flex-wrap:wrap;}
   .radio-row label{display:flex;align-items:center;gap:8px;font-size:15px;}
-  input[type=radio],input[type=checkbox]{accent-color:var(--accent-green);width:18px;height:18px;}
+  input[type=radio],input[type=checkbox]{accent-color:var(--accent);width:18px;height:18px;}
   .callout{
-    background:var(--soft);border-top:2px solid var(--rule-green);border-bottom:2px solid var(--rule-green);
+    background:var(--soft);border-top:2px solid var(--rule);border-bottom:2px solid var(--rule);
     padding:16px 20px;margin:24px 0;
   }
-  .callout h3{font-size:15px;font-weight:700;color:var(--heading-green);margin:0 0 6px;}
+  .callout h3{font-size:15px;font-weight:700;color:var(--accent);margin:0 0 6px;}
   .callout p{margin:0;font-size:15px;}
-  .callout a{color:var(--heading-green);}
+  .callout a{color:var(--accent);}
   .ack{background:var(--soft);padding:18px 20px;margin-top:8px;}
-  .ack .ack-head{display:flex;gap:12px;align-items:flex-start;font-weight:700;color:var(--navy);}
+  .ack .ack-head{display:flex;gap:12px;align-items:flex-start;font-weight:700;color:var(--ink);}
   .ack ul{margin:10px 0 0 6px;padding-left:22px;font-size:15px;}
   .ack li{margin-bottom:8px;}
-  .ack li::marker{color:var(--accent-green);}
+  .ack li::marker{color:var(--accent-mid);}
   .actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:32px 0 8px;}
   button{
-    font-family:inherit;font-size:16px;font-weight:700;padding:12px 26px;border:2px solid var(--navy);
-    background:var(--navy);color:var(--white);cursor:pointer;border-radius:0;
+    font-family:inherit;font-size:16px;font-weight:700;padding:12px 26px;border:2px solid var(--ink);
+    background:var(--ink);color:var(--white);cursor:pointer;border-radius:0;
   }
-  button:hover{background:var(--heading-green);border-color:var(--heading-green);}
-  button.secondary{background:var(--white);color:var(--navy);}
-  button.secondary:hover{background:var(--soft);color:var(--heading-green);border-color:var(--heading-green);}
-  button:focus-visible{outline:3px solid var(--rule-green);outline-offset:2px;}
+  button:hover{background:var(--accent);border-color:var(--accent);}
+  button.secondary{background:var(--white);color:var(--ink);}
+  button.secondary:hover{background:var(--soft);color:var(--accent);border-color:var(--accent);}
+  button:focus-visible{outline:3px solid var(--rule);outline-offset:2px;}
   .status{font-size:14px;color:var(--alert);font-weight:700;min-height:20px;}
   footer{
-    border-top:2px solid var(--rule-green);margin-top:32px;padding-top:10px;
-    text-align:center;font-size:11px;color:var(--grey);
+    border-top:2px solid var(--rule);margin-top:32px;padding-top:10px;
+    text-align:center;font-size:12px;color:var(--grey);
   }
   .hidden{display:none !important;}
   @media (max-width:680px){
@@ -114,6 +114,7 @@
 <div class="sheet">
 
   <header class="brand">
+    <p class="wordmark">INBS District</p>
     <p class="kicker">Charity governance &middot; OSCR</p>
   </header>
 
@@ -185,7 +186,7 @@
     <div class="grid" style="margin-top:18px;">
       <div class="field">
         <label class="lbl" for="email">Email Address <span class="req">*</span></label>
-        <input type="email" id="email" name="email-address" autocomplete="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required>
       </div>
       <div class="field">
         <label class="lbl" for="phone">Phone Number <span class="req">*</span>
@@ -279,8 +280,9 @@
     <p class="status" id="status" role="alert"></p>
   </form>
 
+  <!-- Add a contact line or charity number below if you want one shown. -->
   <footer>
-    Ri Cruden Ltd | Renewable Innovation Centre, 12&ndash;14 Seafield Road, Inverness, IV1 1SG | 01463 220900 | info@ricruden.net | www.ricruden.net
+    INBS District
   </footer>
 </div>
 
@@ -311,7 +313,7 @@
     for (var i=0;i<fields.length;i++){
       var f = fields[i];
       f.disabled = !shown;
-      if (requiredWhenShown[f.id] || f.hasAttribute('data-req')){
+      if (requiredWhenShown[f.id]){
         if (shown){ f.setAttribute('required',''); } else { f.removeAttribute('required'); }
       }
     }
@@ -321,7 +323,6 @@
     var isIndividual = individual.checked;
     setBlock(indBlock, isIndividual);
     setBlock(corpBlock, !isIndividual);
-    // first/last/dob are required only for individuals
     ['firstName','lastName','dob'].forEach(function(id){
       var el = document.getElementById(id);
       if (isIndividual){ el.setAttribute('required',''); } else { el.removeAttribute('required'); }
@@ -338,7 +339,7 @@
       postcode.removeAttribute('pattern');
     } else {
       postcode.setAttribute('pattern','[A-Za-z]{1,2}[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}');
-      postcode.setAttribute('title','Enter a UK postcode, for example IV1 1SG.');
+      postcode.setAttribute('title','Enter a UK postcode, for example AB12 3CD.');
     }
   });
 
@@ -371,9 +372,8 @@
     }
   });
 
-  // Set initial state
   postcode.setAttribute('pattern','[A-Za-z]{1,2}[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}');
-  postcode.setAttribute('title','Enter a UK postcode, for example IV1 1SG.');
+  postcode.setAttribute('title','Enter a UK postcode, for example AB12 3CD.');
   syncType();
 })();
 </script>
